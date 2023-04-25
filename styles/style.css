@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Roboto:ital,wght@0,100;0,300;0,500;1,700&display=swap');
 
+:root { /*para definir as cores em variaveis e não precisar ficar repetindo codigo*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-principal:'Krona One', sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,15 +19,15 @@
 body{
     /*height: 100vh; pra usar 100% da altura da tela */
     box-sizing: border-box; /* para elementos filhos não sairem do pai, que no caso é a tela */
-    background-color: black;
-    color: #f6f6f6;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     width: 100%;
     height: 100%;
     
 }
 
 .apresentacao { 
-    padding:  8% 17%; /* primeiro valor sempre indica a posição vertical e o segundo na horizontal */
+    padding:  5% 15%; /* primeiro valor sempre indica a posição vertical e o segundo na horizontal */
     display: flex;
     align-items: center;
     justify-content: space-between; /* para espaçar os conteudos */
@@ -29,22 +40,41 @@ body{
     gap: 40px;  /* Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column */
 }
 
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+.cabecalho__menu__links {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+
 .apresentacao__conteudo__titulo {
     font-size: 36px;
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 .apresentacao__conteudo__texto {
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
 }
 
 .titulo-destaque {
-    color: #22d4fd;
+    color: var(--cor-terciaria);
 }
 
 .subtitulo__links {
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fonte-principal);
     font-weight: 400;
     font-size: 21px;
 }
@@ -62,13 +92,13 @@ body{
     justify-content: center;
     gap: 16px;
     width: 378px;
-    border: 2px solid #22d4fd ;
+    border: 2px solid var(--cor-terciaria);
     text-align: center;
     border-radius: 12px; /* para arredondar a borda */
     font-size: 25px;
     padding: 22px 0px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
     text-decoration: none; 
     font-weight: 600;
 
@@ -83,20 +113,22 @@ body{
 
 
 .link:hover {
-    background-color: #272727;
-    color: #fffafa; 
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria); 
     
 }  
 
 .rodape {
     text-align: center;
     padding: 24px;
-    color: black;
-    background-color: #22d4fd;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
     font-size: 20px;
     font-weight: 400;
     
 }
+
+
 
 
